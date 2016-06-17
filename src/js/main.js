@@ -5,4 +5,11 @@ jQuery(function($){
    	prevEl      : '.bb-nav-next'
    });
 
+   $('.bb-bookblock').css('height', $(".bb-bookblock img").height());
+
+});
+
+$(window).resize(function () {
+   $('.bb-bookblock').css('height', $(".bb-bookblock img").height());
+	
 });

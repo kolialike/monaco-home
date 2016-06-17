@@ -88,7 +88,7 @@
 		// ltr (left to right) or rtl (right to left)
 		direction : 'ltr',
 		// speed for the flip transition in ms
-		speed : 1000,
+		speed : 700,
 		// easing for the flip transition
 		easing : 'ease-in-out',
 		// if set to true, both the flipping page and the sides will have an overlay to simulate shadows
@@ -126,7 +126,7 @@
 			// orientation class
 			this.$el.addClass( 'bb-' + this.options.orientation );
 			// items
-			this.$items = this.$el.children( '.bb-item' ).removeClass('activeslide');
+			this.$items = this.$el.children( '.bb-item' ).hide();
 			// total items
 			this.itemsCount = this.$items.length;
 			// current item´s index
@@ -134,7 +134,7 @@
 			// previous item´s index
 			this.previous = -1;
 			// show first item
-			this.$current = this.$items.eq( this.current ).addClass('activeslide');
+			this.$current = this.$items.eq( this.current ).show();
 			// get width of this.$el
 			// this will be necessary to create the flipping layout
 			this.elWidth = this.$el.width();
@@ -223,8 +223,8 @@
 
 		},
 		_layoutNoSupport : function(dir) {
-			this.$items.removeClass('activeslide');
-			this.$nextItem.addClass('activeslide');
+			this.$items.hide();
+			this.$nextItem.show();
 			this.end = false;
 			this.isAnimating = false;
 			var isLimit = dir === 'next' && this.current === this.itemsCount - 1 || dir === 'prev' && this.current === 0;
@@ -248,7 +248,7 @@
 				$o_right = $s_right.find( 'div.bb-overlay' ),
 				speed = this.end ? 400 : this.options.speed;
 
-			this.$items.removeClass('activeslide');
+			this.$items.hide();
 			this.$el.prepend( $s_left, $s_middle, $s_right );
 			
 			$s_middle.css({
@@ -257,7 +257,7 @@
 			}).on( this.transEndEventName, function( event ) {
 				if ( $( event.target ).hasClass( 'bb-page' ) ) {
 					self.$el.children( '.bb-page' ).remove();
-					self.$nextItem.addClass('activeslide');
+					self.$nextItem.show();
 					self.end = false;
 					self.isAnimating = false;
 					var isLimit = dir === 'next' && self.current === self.itemsCount - 1 || dir === 'prev' && self.current === 0;
@@ -468,7 +468,7 @@
 				this._stopSlideshow();
 			}
 			this.$el.removeClass( 'bb-' + this.options.orientation );
-			this.$items.addClass('activeslide');
+			this.$items.show();
 
 			if ( this.options.nextEl !== '' ) {
 				$( this.options.nextEl ).off( '.bookblock' );
