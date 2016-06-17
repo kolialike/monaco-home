@@ -57,13 +57,148 @@
 					line-height: 34px
 
 .content
-	background-color: #930000
-	background-image: image-url("content-bg1.jpg")  
-	background-position: left bottom
-	background-repeat: no-repeat 
+	overflow: hidden
+	min-height: 815px
+	position: relative
+	&:after
+		content: ""
+		display: block
+		border: 404px solid transparent
+		border-right: 1920px solid #fff
+		border-bottom: 0px solid #fff
+		position: absolute
+		bottom: 0px
+		right: 0px
+		z-index: 1
+	.content-left
+		width: 580/1180*100%
+		float: left
+		img 
+			max-width: 100%
+			display: block
+			position: absolute
+			top: 48px
+			left: -206px
+	.content-right
+		width: 600/1180*100%
+		color: #fff 
+		float: right
+		margin-top: 93px
+		h4 
+			font-size: 36px
+			line-height: 38px
+			margin-bottom: 39px
+		p
+			font-size: 18px
+			letter-spacing: 1px
+			line-height: 22px	
 
+.corporate-colors
+	// background: image-url("book.png") left 15px no-repeat
+	overflow: hidden
+	position: relative
+	z-index: 10
+	margin-top: -125px
+	.corporate-colors-item
+		float: right 
+		max-width: 586px
+		width: 100%
+		padding-bottom: 130px
+	h4 
+		color: #231f20
+		font-size: 36px
+		line-height: 36px
+		padding-bottom: 20px
+	h5
+		color: #b62025
+		text-transform: uppercase
+		font-size: 18px
+		margin-top: 60px	
+		margin-bottom: 5px	
+		span 
+			color: #231f20
+	p
+		color: #231f20
+		text-transform: uppercase
+		font-size: 18px
+		font-weight: 700
+		span 
+			font-weight: 700
+	.corporate-colors-items
+		height: 190px
+		width: 100%
+		margin-top: 15px
 
+.content-img
+	overflow: hidden
+	min-height: 839px
+	position: relative
+	margin-top: -98px
+	&:after
+		content: ""
+		display: block
+		border: 404px solid transparent
+		border-right: 1920px solid #fff
+		border-top: 0px solid #fff
+		position: absolute
+		top: 0px
+		right: 0px
+		z-index: 1
+	.content-img-item
+		img 
+			max-width: 100%
+			display: block
+			position: absolute
+			top: 0px
+			left: -26px
+.content-img1
+	overflow: hidden
+	position: relative
+	min-height: 914px
+	margin-top: -98px
+	text-align: center
+	.content-img-item
+		text-align: center
+		img 
+			margin-top: 115px
+			max-width: 100%
+			display: block
+			width: 100%
 
+.content-slider
+	padding: 225px 0
+	.wrapper
+		max-width: 1020px
+		background: image-url("slider-bg.png") top center no-repeat
+		background-size: 100%
+		padding: 0 14px
+.bb-bookblock
+	+pie-clearfix
+.bb-item
+	img 
+		width: 100%
+		max-width: 100%
+		display: block
+.bb-custom-nav
+	display: block
+	.bb-nav-prev
+		display: block
+		width: 34px
+		height: 65px
+		position: absolute
+		top: 50%
+		background-image: image-url("arrow-r.png")
+		right: -70px
+		margin-top: -32.5px
+	.bb-nav-next
+		display: block
+		width: 34px
+		height: 65px
+		background-image: image-url("arrow-l.png")
+		position: absolute
+		top: 50%
+		left: -70px
+		margin-top: -32.5px
 
 
 

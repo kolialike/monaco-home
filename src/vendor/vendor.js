@@ -1,2 +1,5 @@
+//= modernizr.custom.js
 //= jquery-1.11.3.min.js
-//= jquery.flexslider.js
+//= jquerypp.custom.js
+//= jquery.bookblock.js
+
