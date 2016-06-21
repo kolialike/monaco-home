@@ -1,5 +1,21 @@
-//= partials/head.html
-//= partials/header.html
+<!DOCTYPE html>
+<html>
+<head>r
+	<meta charset="UTF-8">
+	<title>Base</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../js/vendor.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+	<div class="global-wrapper">
+<header id="header">
+	<div class="wrapper">
+	</div>
+</header>
 		<section class="main-content">
 			<div  class="banner-img">
 				<img src="../img/banner-bg.jpg" alt="">
@@ -13,8 +29,24 @@
 		<section class="content" style="background-color: #930000;">
 			<div class="wrapper">
 				<div class="content-left"><img src="../img/monaco.png" alt=""></div>
+				<style>
+					.content-left > img {
+						position: absolute;
+						top: 48px;
+						left: -206px;
+					}
+					@media screen and (max-width: 1200px){
+						.content .content-left > img {
+							position: relative;
+							top: 0;
+							left: -27px;
+							display: block;
+							margin: auto;
+						};
+					}
+				</style>
 				<div class="content-right">
-					<h4>Задача</h4>
+					<h4>Описание проэкта</h4>
 					<p>Разработка брендбука – достаточно долгий и кропотливый проект, в котором важна аккуратность, идеальная точность и внимательность к деталям. Мы создали брендбук, который ярко выражает ценности компании и  способствует повышению ее прибыли.</p>
 					<p>Прописали правила работы с фирменным стилем, правила использования логотипа, а также разработали ключевые элементы дизайна.</p>
 					<p>Мы использовали активный красный цвет, который присутствовал в самом логотипе, что помогло достичь динамичности и выразительности в дизайне фирменного стиля компании. Сделали бренд более заметным и запоминающимся. Благодаря чему Нам удалость достичь единого визуального языка и легкой идентификации бренда.</p>
@@ -50,26 +82,28 @@
 		<section class="content-slider"  style="background-color: #af000d;">
 			<div class="wrapper">
 				<div id="bb-bookblock" class="bb-bookblock">
-					<div class="bb-item bb-nav-prev">
+					<div class="bb-item">
 						<img src="../img/slider-img1.png" alt="">
 					</div>
-					<div class="bb-item bb-nav-prev">
+					<div class="bb-item">
 						<img src="../img/slider-img2.png" alt="">
 					</div>
-					<div class="bb-item bb-nav-prev">
+					<div class="bb-item">
 						<img src="../img/slider-img3.png" alt="">
 					</div>
-					<div class="bb-item bb-nav-prev">
+					<div class="bb-item">
 						<img src="../img/slider-img4.png" alt="">
 					</div>
-					<div class="bb-item bb-nav-prev">
+					<div class="bb-item">
 						<img src="../img/slider-img5.png" alt="">
 					</div>
-					<div class="bb-item bb-nav-prev">
+					<div class="bb-item">
 						<img src="../img/slider-img6.png" alt="">
 					</div>
 
 					<div class="bb-custom-nav">
+						<div class="bb-nav-left bb-nav-prev"></div>
+						<div class="bb-nav-right bb-nav-next"></div>
 						<a href="#" class="bb-nav-next"></a>
 						<a href="#" class="bb-nav-prev"></a>
 					</div>
@@ -77,4 +111,13 @@
 			</div>
 		</section>
 
-//= partials/footer.html
+	<footer id="footer" style="background: #231f20;">
+		<div class="wrapper">
+			<div class="footer-logo">
+				<a href="#"><img src="../img/footer-logo.png" alt=""></a>
+			</div>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

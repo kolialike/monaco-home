@@ -60,11 +60,12 @@
 	overflow: hidden
 	min-height: 815px
 	position: relative
+	display: block
 	&:after
 		content: ""
 		display: block
 		border: 404px solid transparent
-		border-right: 1920px solid #fff
+		border-right: 3000px solid #fff
 		border-bottom: 0px solid #fff
 		position: absolute
 		bottom: 0px
@@ -73,34 +74,62 @@
 	.content-left
 		width: 580/1180*100%
 		float: left
+		text-align: center
+		+breakpoint(1200px)
+			float: none
+			width: 100%
+			margin-top: 40px
 		img 
 			max-width: 100%
 			display: block
-			position: absolute
-			top: 48px
-			left: -206px
+				
 	.content-right
 		width: 600/1180*100%
 		color: #fff 
 		float: right
 		margin-top: 93px
+		padding-bottom: 426px
+		padding-left: 20px
+		+box-sizing(border-box)
+		+breakpoint(1200px)
+			display: block
+			float: none 
+			width: 100%
+			margin-top: 20px
+			padding-left: 0
 		h4 
 			font-size: 36px
 			line-height: 38px
 			margin-bottom: 39px
+			+breakpoint(1200px)
+				margin-bottom: 10px
+				font-size: 28px
 		p
 			font-size: 18px
 			letter-spacing: 1px
 			line-height: 22px	
+			+breakpoint(1023px)
+				font-size: 14px
+// .content-right-item
+// 	float: right
+// 	clear: both
+// 	max-width: 741px
+// 	width: 100%
+// 	position: relative
+// 	z-index: 3
+// 	img 
+// 		display: block
+// 		z-index: 3
+
+
 
 .corporate-colors
-	// background: image-url("book.png") left 15px no-repeat
 	overflow: hidden
 	position: relative
 	z-index: 10
 	margin-top: -125px
 	+breakpoint(1023px)
-		margin-top: -235px
+		margin-top: -290px
 	.corporate-colors-left
 		float: left 
 		max-width: 570px
@@ -119,6 +148,7 @@
 				position: static
 				display: block
 				width: 100%
+				float: none
 				top: 0
 				left: 0
 	.corporate-colors-item
@@ -140,6 +170,10 @@
 			font-size: 36px
 			line-height: 36px
 			padding-bottom: 20px
+			+breakpoint(767px)
+				font-size: 27px
+				margin-top: 27px
+				padding-bottom: 8px
 		h5
 			color: #b62025
 			text-transform: uppercase
@@ -165,22 +199,50 @@
 			height: 140px
 		+breakpoint(469px)
 			height: 80px
+	.card
+		+breakpoint(767px)
+			margin-left: 20px
+
+.pen
+	float: left
+	width: 50%
+	margin-left: -105px
+	margin-top: 108px
+	+breakpoint(1023px)
+		float: none
+		display: block
+		width: 100%
+		text-align: center
+		margin: auto
+		max-width: 100%
+		margin-left: 0
+		margin-top: -35px
+		margin-bottom: 40px
+	img 
+		width: 100%
+		+breakpoint(1023px)
+			position: static
+			display: block
+			width: 100%
+			top: 0
+			left: 0
+
 
 .content-img
 	overflow: hidden
 	min-height: 839px
 	position: relative
 	margin-top: -98px
-	+breakpoint(1023px)
-		background-image: image-url("content-bg5.jpg")
-		background-size: cover
-		background-repeat: no-repeat
-		background-position: center bottom
+	display: block
+	+breakpoint(1050px)
+		min-height: 0
+	+breakpoint(550px)
+		margin-top: -280px
 	&:after
 		content: ""
 		display: block
 		border: 404px solid transparent
-		border-right: 1920px solid #fff
+		border-right: 3000px solid #fff
 		border-top: 0px solid #fff
 		position: absolute
 		top: 0px
@@ -190,9 +252,15 @@
 		img 
 			max-width: 100%
 			display: block
-			+breakpoint(1023px)
-				display: none
-
+			position: absolute
+			top: 100px
+			+breakpoint(1050px)
+				position: relative
+				top: 110px
+				padding-top: 150px
+			+breakpoint(768px)
+				top: 55px
+				padding-top: 265px
 .content-img1
 	overflow: hidden
 	position: relative
@@ -257,6 +325,20 @@
 			background-size: 100%
 			left: -42px
 			margin-top: -13px
+	.bb-nav-left
+		float: left
+		width: 50%
+		top: 34px
+		height: 100%
+		right: -9px
+		background: transparent
+	.bb-nav-right
+		float: right 
+		width: 50%
+		top: 34px
+		height: 100%
+		right: -9px
+		background: transparent
 
 
 
