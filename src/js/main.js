@@ -5,10 +5,19 @@ jQuery(function($){
        	circular    : true,
        	prevEl      : '.bb-nav-next'
        });
+
+      var myArray = $(".bb-bookblock img");
+      var heightArray = myArray.map(function() {
+        return $(this).height();
+      }).get();
+
+      $('.bb-bookblock').css('height', Math.max.apply(Math, heightArray));
       $(window).resize(function () {
-        $('.bb-bookblock').css('height', $(".bb-bookblock img").height());
+        heightArray = myArray.map(function() {
+          return $(this).height();
+        }).get();
+        $('.bb-bookblock').css('height', Math.max.apply(Math, heightArray));
       });
-      $('.bb-bookblock').css('height', $(".bb-bookblock img").height());
    });    
 
 });
