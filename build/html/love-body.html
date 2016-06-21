@@ -28,25 +28,59 @@
 		</section>
 		<section class="content" style="background: linear-gradient(to top, #940101, #740000);">
 			<div class="wrapper">
-				<div class="content-left"><img src="../img/body.png" alt=""></div>
+				<div class="content-left"><img class="body" src="../img/body.png" alt=""></div>
 				<style>
-					.content-left > img {
+					.content{
+						padding-bottom: 160px;
+					}
+					.content-left img {
 						left: -125px;
 						top: 97px;
 						position: absolute;
-					}
-					@media screen and (max-width: 1200px){
-						.content .content-left img {
-							top: 0;
-						};
+						z-index: 13
 					}
 					@media screen and (max-width: 1600px){
 						.content .content-left img {
 							left: 0;
 							position: relative;
 							display: inline-block;
-						};
+						}
 					}
+					@media screen and (max-width: 1200px){
+						.content{
+							padding-bottom: 0px;
+						}
+						.content .content-left img {
+							top: 0;
+							margin-top: 35px;
+						}
+					}
+					@media screen and (max-width: 1023px){
+						.content .content-left img {
+							top: 0;
+							margin-top: 35px;
+							padding: 0 43px;
+							box-sizing: border-box;
+						}
+						.content .content-right{
+							padding: 0 55px 426px;
+						}
+					}
+					@media screen and (max-width: 767px){
+						.content-left {
+							margin-top: 30px!important;
+						}
+						.content-left img {
+							margin-top: 0px!important;
+							padding: 0 10px!important;
+							box-sizing: border-box;
+							left: -10px!important;
+						}
+						.content .content-right{
+							padding: 0 0px 426px!important;
+						}
+					}
+					
 				</style>
 				<div class="content-right">
 					<h4>Описание проэкта</h4>
